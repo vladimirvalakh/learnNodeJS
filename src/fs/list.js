@@ -2,10 +2,11 @@ import fs from 'fs';
 import path from 'path'
 import {fileURLToPath} from 'url';
 
+const filename = fileURLToPath(import.meta.url);
+const dirname = path.dirname(filename);
+
 const list = async () => {
-    const __filename = fileURLToPath(import.meta.url);
-    const __dirname = path.dirname(__filename);
-    const folderPath = path.join(__dirname, 'files');
+    const folderPath = path.join(dirname, 'files');
 
     let isNoExistFilesFolder = !fs.existsSync(folderPath)
 

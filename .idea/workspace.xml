@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a16c507-b214-4c4b-96c9-97a14ce4c5d8" name="Default Changelist" comment="init basic repository">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="5a16c507-b214-4c4b-96c9-97a14ce4c5d8" name="Default Changelist" comment="implement Command line interface(src/cli) section functionality">
+      <change afterPath="$PROJECT_DIR$/src/modules/esm.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fs/copy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/copy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fs/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/create.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fs/delete.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/delete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fs/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fs/read.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/read.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fs/rename.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/fs/rename.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +52,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669895782518</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="implement Command line interface(src/cli) section functionality">
+      <created>1670231559550</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670231559550</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -65,9 +75,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init basic repository" />
-    <option name="LAST_COMMIT_MESSAGE" value="init basic repository" />
+    <MESSAGE value="implement Command line interface(src/cli) section functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement Command line interface(src/cli) section functionality" />
   </component>
 </project>

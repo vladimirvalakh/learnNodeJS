@@ -2,10 +2,11 @@ import fs from 'fs';
 import path from 'path'
 import {fileURLToPath} from 'url';
 
+const filename = fileURLToPath(import.meta.url);
+const dirname = path.dirname(filename);
+
 const remove = async () => {
-    const __filename = fileURLToPath(import.meta.url);
-    const __dirname = path.dirname(__filename);
-    const filenamePath = path.join(__dirname, 'files', 'fileToRead.txt');
+    const filenamePath = path.join(dirname, 'files', 'fileToRead.txt');
 
     let isNoExistFilename = !fs.existsSync(filenamePath)
 

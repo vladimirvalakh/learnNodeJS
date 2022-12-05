@@ -2,11 +2,12 @@ import fs from 'fs';
 import path from 'path'
 import {fileURLToPath} from 'url';
 
+const filename = fileURLToPath(import.meta.url);
+const dirname = path.dirname(filename);
+
 const copy = async () => {
-    const __filename = fileURLToPath(import.meta.url);
-    const __dirname = path.dirname(__filename);
-    const folderPath = path.join(__dirname, 'files');
-    const copyFolderPath = path.join(__dirname, 'files_copy');
+    const folderPath = path.join(dirname, 'files');
+    const copyFolderPath = path.join(dirname, 'files_copy');
 
     let isNoExistFilesFolder = !fs.existsSync(folderPath)
     let isExistFilesFolder = fs.existsSync(copyFolderPath)

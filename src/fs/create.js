@@ -3,10 +3,11 @@ import fs from 'fs';
 import path from 'path'
 import {fileURLToPath} from 'url';
 
+const filename = fileURLToPath(import.meta.url);
+const dirname = path.dirname(filename);
+
 const create = async () => {
-    const __filename = fileURLToPath(import.meta.url);
-    const __dirname = path.dirname(__filename);
-    const filePath = path.join(__dirname, 'files', 'fresh.txt');
+    const filePath = path.join(dirname, 'files', 'fresh.txt');
 
     open(filePath, 'wx', (err) => {
         if (err && err.code === 'EEXIST') {

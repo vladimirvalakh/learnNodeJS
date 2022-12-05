@@ -2,11 +2,12 @@ import fs from 'fs';
 import path from 'path'
 import {fileURLToPath} from 'url';
 
+const filename = fileURLToPath(import.meta.url);
+const dirname = path.dirname(filename);
+
 const rename = async () => {
-    const __filename = fileURLToPath(import.meta.url);
-    const __dirname = path.dirname(__filename);
-    const wrongFilenamePath = path.join(__dirname, 'files', 'wrongFilename.txt');
-    const properFilenamePath = path.join(__dirname, 'files', 'properFilename.md');
+    const wrongFilenamePath = path.join(dirname, 'files', 'wrongFilename.txt');
+    const properFilenamePath = path.join(dirname, 'files', 'properFilename.md');
 
     let isNoExistWrongFilename = !fs.existsSync(wrongFilenamePath)
     let isExistProperFilename = fs.existsSync(properFilenamePath)
