@@ -8,7 +8,10 @@ const copy = async () => {
     const folderPath = path.join(__dirname, 'files');
     const copyFolderPath = path.join(__dirname, 'files_copy');
 
-    if (fs.existsSync(copyFolderPath)) {
+    let isNoExistFilesFolder = !fs.existsSync(folderPath)
+    let isExistFilesFolder = fs.existsSync(copyFolderPath)
+
+    if (isExistFilesFolder || isNoExistFilesFolder) {
         throw Error('FS operation failed')
     } else {
         fs.cp(folderPath, copyFolderPath, {recursive: true}, function (err) {
